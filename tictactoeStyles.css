@@ -1,0 +1,205 @@
+body{
+  background-color: black;
+  background-image:
+radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+font-family: 'Lobster Two', cursive;
+}
+
+
+.header{
+  color: black;
+  text-shadow:
+    0 0 7px palevioletred,
+    0 0 10px palevioletred,
+    0 0 21px rgb(65, 182, 230),
+    0 0 42px rgb(65, 182, 230),
+    0 0 82px rgb(65, 182, 230),
+    0 0 92px rgb(65, 182, 230),
+    0 0 102px rgb(65, 182, 230),
+    0 0 151px rgb(65, 182, 230);
+  text-align: center;
+  
+}
+
+.button {
+    background-color: black;
+    cursor: pointer;
+    /* outline: 1px solid white; */
+    box-shadow: 0 0 5pt 1pt palevioletred;
+    border-radius: 10px;
+    color: black;
+	  font-size: 12px;
+	-webkit-text-stroke: 1.2px rgb(65,182,230);
+	-webkit-text-fill-color: white;
+  }
+
+  button:hover{
+    background-color: white;
+  }
+
+  .winner{
+    color: black;
+    text-shadow:
+    0 0 7px rgb(65, 182, 230),
+    0 0 10px palevioletred,
+    0 0 21px rgb(65, 182, 230),
+    0 0 42px rgb(65, 182, 230),
+    0 0 82px rgb(65, 182, 230),
+    0 0 92px rgb(65, 182, 230),
+    0 0 102px palevioletred,
+    0 0 151px palevioletred;
+    text-align: center;
+  }
+
+  .turn{
+    grid-area: turn;
+    color: palevioletred;
+    text-align: center;
+  }
+  .game-board {
+    width: 400px;
+    height: 225px;
+    margin: 0 auto;
+    background-color: transparent;
+    color: rgb(204, 28, 28);
+    border: 6px solid #0b0d0f;
+    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+   
+  }
+
+  .grid-row {
+    border: solid black;
+    border-radius: 6px;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 4em;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: transparent;
+    
+  }
+
+  /* .block {
+    background-color: rgb(219, 28, 28);
+    border: 6px solid green;
+    border-radius: 6px;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 20em;
+  } */
+
+  @media only screen and (max-width: 415px) {
+
+
+    body{
+      background-color: black;
+      background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    font-family: 'Lobster Two', cursive;
+    }
+    
+    
+    .header{
+      color: black;
+      text-shadow:
+        0 0 7px palevioletred,
+        0 0 10px palevioletred,
+        0 0 21px rgb(65, 182, 230),
+        0 0 42px rgb(65, 182, 230),
+        0 0 82px rgb(65, 182, 230),
+        0 0 92px rgb(65, 182, 230),
+        0 0 102px rgb(65, 182, 230),
+        0 0 151px rgb(65, 182, 230);
+      text-align: center;
+      
+    }
+    
+    .button {
+        background-color: black;
+        cursor: pointer;
+        /* outline: 1px solid white; */
+        box-shadow: 0 0 5pt 1pt palevioletred;
+        border-radius: 10px;
+        color: black;
+        font-size: 12px;
+      -webkit-text-stroke: 1.2px rgb(65,182,230);
+      -webkit-text-fill-color: white;
+      }
+    
+      button:hover{
+        background-color: white;
+      }
+    
+      .winner{
+        color: black;
+        text-shadow:
+        0 0 7px rgb(65, 182, 230),
+        0 0 10px palevioletred,
+        0 0 21px rgb(65, 182, 230),
+        0 0 42px rgb(65, 182, 230),
+        0 0 82px rgb(65, 182, 230),
+        0 0 92px rgb(65, 182, 230),
+        0 0 102px palevioletred,
+        0 0 151px palevioletred;
+        text-align: center;
+      }
+    
+      .turn{
+        grid-area: turn;
+        color: palevioletred;
+        text-align: center;
+      }
+      .game-board {
+        width: 200px;
+        height: 225px;
+        margin: 0 auto;
+        background-color: transparent;
+        color: rgb(204, 28, 28);
+        border: 6px solid #0b0d0f;
+        border-radius: 10px;
+        display: grid;
+        gap: 10px;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+       
+      }
+    
+      .grid-row {
+        border: solid black;
+        border-radius: 6px;
+        font-family: Helvetica;
+        font-weight: bold;
+        font-size: 4em;
+        display: grid;
+        gap: 10px;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: transparent;
+        
+      }
+    
+      /* .block {
+        background-color: rgb(219, 28, 28);
+        border: 6px solid green;
+        border-radius: 6px;
+        font-family: Helvetica;
+        font-weight: bold;
+        font-size: 20em;
+      } */
+  }
