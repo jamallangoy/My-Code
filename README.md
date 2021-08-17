@@ -1,6 +1,6 @@
-# Tik-Tak Toe
+# Tic-Tac Toe
 
-<img src="https://cdn.pixabay.com/photo/2020/04/24/06/46/piggy-money-bank-5085515_1280.png" width="200px" height="200px" />
+<img src="https://github.com/jamallangoy/Tic-Tac-Toe/blob/master/ticTacToe%20(snippet).PNG?raw=true" width="200px" height="200px" />
 
 ## Version 1 - Week 16: Tik-Tak Toe (MIT XPro, August 2021)
 
