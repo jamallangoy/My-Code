@@ -1,6 +1,6 @@
 # Tic-Tac Toe
 
-<img src="https://github.com/jamallangoy/Tic-Tac-Toe/blob/master/ticTacToe%20(snippet).PNG?raw=true" width="200px" height="200px" />
+<img src="https://github.com/jamallangoy/Tic-Tac-Toe/blob/master/ticTacToe%20(snippet).PNG?raw=true" width="300px" height="300px" />
 
 ## Version 1 - Week 16: Tik-Tak Toe (MIT XPro, August 2021)
 
@@ -10,7 +10,7 @@ This is a basic "Tic-Tac Toe game board".  Using css grids and a background imag
 
 # How to Run
 
-1) Fork the "Tik-Tak Toe" repository
+1) Fork the "Tic-Tac Toe" repository
 2) Clone onto your machine using Git
 3) Drag and drop "ticTacToe.html" into a new tab
 4) Innovate it and teach us what you did and how you did it!!!
