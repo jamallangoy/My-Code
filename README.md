@@ -1,6 +1,6 @@
 # Tic-Tac Toe
 
-<img src="https://github.com/jamallangoy/Tic-Tac-Toe/blob/master/ticTacToe%20(snippet).PNG?raw=true" width="300px" height="300px" />
+<img src="https://github.com/jamallangoy/Tic-Tac-Toe/blob/master/ticTacToe%20(snippet).PNG?raw=true" width="400px" height="200px" />
 
 ## Version 1 - Week 16: Tik-Tak Toe (MIT XPro, August 2021)
 
