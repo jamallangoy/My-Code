@@ -8,6 +8,12 @@ radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px
 background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
 background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 font-family: 'Lobster Two', cursive;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 3(repeat 1fr);
+grid-template-areas:
+    "turn"
+;
 }
 
 
@@ -26,7 +32,9 @@ font-family: 'Lobster Two', cursive;
   
 }
 
-.button {
+.button,
+.startButton,
+.endButton {
     background-color: black;
     cursor: pointer;
     /* outline: 1px solid white; */
@@ -37,6 +45,23 @@ font-family: 'Lobster Two', cursive;
 	-webkit-text-stroke: 1.2px rgb(65,182,230);
 	-webkit-text-fill-color: white;
   }
+
+.startButton, 
+.endButton {
+	-webkit-text-stroke: .4px rgb(65,182,230);
+	-webkit-text-fill-color: white;
+}
+
+.startButton:hover{
+  background-color: greenyellow;
+  -webkit-text-stroke: .4px rgb(65,182,230);
+  -webkit-text-fill-color: black;
+}
+
+
+.endButton:hover{
+  background-color: red;
+}
 
   button:hover{
     background-color: white;
