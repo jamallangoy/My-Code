@@ -4,9 +4,13 @@
 
 ## Version 1 - Week 16: Tik-Tak Toe (MIT XPro, August 2021)
 
+## Version 2 - Week 17: Tic-Tac Toe (MIT XPro, August 2021
+
 # Description
 
-This is a basic "Tic-Tac Toe game board".  Using css grids and a background image, I've replicated a simple, classic game with the simple functionality. 
+(V1) This is a basic "Tic-Tac Toe game board".  Using css grids and a background image, I've replicated a simple, classic game with the simple functionality. 
+
+(V2) Update: Added a start and end button with start and reset functionality using the React hook, "useState".  I've also updated the css file to compliment any adjustments made...
 
 # How to Run
 
@@ -29,7 +33,7 @@ Learn how to use REACT Components and JSX
 # Next Steps:
 1) Create an ending sequence
 2) Game series of 3, 5, and/or 7
-3) Reset button to reset the individual game or game series
+3) **(Completed) Reset button to reset the individual game or game series (Completed)**
 
 # Programming Languages used
 1) Javascript
