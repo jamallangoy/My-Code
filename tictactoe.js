@@ -3,10 +3,24 @@ const Board = () => {
   // State keeps track of next player and gameState
   const [player, setPlayer] = React.useState(1);
   const [gameState, setGameState] = React.useState([]);
+  const [start, setStart] = React.useState();
+
   let status = `Winner is ${checkForWinner(gameState)}`;
 
   // Part 1 step 1 code goes here
   // Use conditional logic to set a variable to either 'Player O' or  'Player X'
+
+  const toggleStart = () => {
+    setStart(1)
+  }
+
+  const toggleEnd = () => {
+    setStart('');
+    setPlayer(1);
+    setGameState([]);
+    
+  }
+
   let playerTurn = `Next Player: ${player == '0' ? 'Player O' : 'Player X'}`;
 
   console.log(`We hav a winner ${status}`);
@@ -37,21 +51,33 @@ const Board = () => {
     <div className="game-board">
       
       <div className="grid-row">
-        {renderSquare(0)}
-        {renderSquare(1)}
-        {renderSquare(2)}
+        {start && renderSquare(0)}
+        {start && renderSquare(1)}
+        {start && renderSquare(2)}
       </div>
       <div className="grid-row">
-        {renderSquare(3)}
-        {renderSquare(4)}
-        {renderSquare(5)}
+        {start && renderSquare(3)}
+        {start && renderSquare(4)}
+        {start && renderSquare(5)}
       </div>
       <div className="grid-row">
-        {renderSquare(6)}
-        {renderSquare(7)}
-        {renderSquare(8)}
+        {start && renderSquare(6)}
+        {start && renderSquare(7)}
+        {start && renderSquare(8)}
       </div>
+    
+      <button
+        className="startButton"
+        onClick={toggleStart}
+      >Start Game</button>
+      <button
+        className="endButton"
+        onClick={toggleEnd}
+      >End Game</button>
+    
     </div>
+
+    
     
   </>
   );
@@ -167,226 +193,3 @@ function isSuperset(set, subset) {
 // ========================================
 
 ReactDOM.render(<Game />, document.getElementById('root'));
-
-
-
-// const Square = ({ takeTurn, id }) => {
-//     const mark = ["O", "X", "+"];
-//     // id is the square's number
-//     // filled tells us if square has been filled
-//     // tik tells us symbol in square (same as player)
-//     // We call takeTurn to tell Parent we have filled the square
-//     const [filled, setFilled] = React.useState(false);
-//     const [tik, setTik] = React.useState(2);
-  
-//     return (
-//       <button
-//         onClick={() => {
-//           setTik(takeTurn(id));
-//           setFilled(true);
-//           console.log(`Square: ${id} filled by player : ${tik}`);
-//         }}
-//       >
-//         <h1>{mark[tik]}</h1>
-//       </button>
-//     );
-//   };
-  
-//   const Board = () => {
-//     // 1st player is X ie 1
-//     // State keeps track of next player and gameState
-//     const [player, setPlayer] = React.useState(1);
-//     const [gameState, setGameState] = React.useState([]);
-//     // check for winner (see superset.js)
-//     function checkForWinner (state) {
-        
-//       const win = [
-//           [0, 1, 2],
-//           [3, 4, 5],
-//           [6, 7, 8],
-//           [0, 3, 6],
-//           [1, 4, 7],
-//           [2, 5, 8],
-//           [0, 4, 8],
-//           [2, 4, 6],
-  
-//       ];
-  
-//       for (let i = 0; i < win.length; i++) {
-//           const [a, b, c] = win[i];
-//           if (state[a] == state[b] && state[a] == state[c] && state[a])
-//           return state[a] 
-//       }
-  
-//       return null;
-//   }
-//     let status = `Winner is ${checkForWinner(gameState)}`;
-//     console.log(`We hava a winner ${status}`);
-  
-//     const takeTurn = (id) => {
-//       setGameState([...gameState, { id: id, player: player }]);
-//       setPlayer((player + 1) % 2); // get next player
-//       return player;
-//     };
-//     function renderSquare(i) {
-//       // use properties to pass callback function takeTurn to Child
-//       return <Square takeTurn={takeTurn} id={i}></Square>;
-//     }
-//     return (
-//       <div className="game-board">
-//         <div className="grid-row">
-//           {renderSquare(0)}
-//           {renderSquare(1)}
-//           {renderSquare(2)}
-//         </div>
-//         <div className="grid-row">
-//           {renderSquare(3)}
-//           {renderSquare(4)}
-//           {renderSquare(5)}
-//         </div>
-//         <div className="grid-row">
-//           {renderSquare(6)}
-//           {renderSquare(7)}
-//           {renderSquare(8)}
-//         </div>
-//         <div id="info">
-//           <h1>{status}</h1>
-//         </div>
-//       </div>
-//     );
-//   };
-  
-//   const Game = () => {
-//     return (
-//       <div className="game">
-//         <Board></Board>
-//       </div>
-//     );
-//   };
-  
-//   // ========================================
-  
-//   ReactDOM.render(<Game />, document.getElementById("root"));
-  
-
-
-
-
-// ============================================================================
-
-// const Square = ({ id, player, newState }) => {
-//     const [color, setColor] = React.useState("green");
-//     const [status, setStatus] = React.useState(null);
-//     const XorO = ["X", "O"]
-//     // const palet = ["white"];
-//     // const getRandomColor = () => palet[Math.floor(Math.random() * 3)]
-    
-//     React.useEffect(() => {
-//         console.log(`Render ${id}`);
-//         return () => console.log(`unmounting Square ${id}`);
-//     })
-     
-//     return(
-//         <button 
-//             onClick={e => {
-//                 // let col = getRandomColor();
-//                 // setColor(col);
-//                 let nextPlayer = newState(id)
-//                 setStatus(nextPlayer)
-//                 // e.target.style.background = col
-//             }}
-//         >
-//         <h2>{XorO[status]}</h2></button>
-//     )
-// }
-
-// const Board = () => {
-//     const { useState } = React;
-//     const [player, setPlayer] = useState(1);
-//     const [mounted, setMounted] = useState(true);
-//     const [state, setState] = useState(Array(9).fill(null));
-//     let status = `Player ${player}`;
-//     let winner = checkWinner(state)
-//     if (winner != null) status = `Player ${player} wins!!!`
-
-//     function newState (idOfSquare) {
-//       let thePlayer = player;
-//       state[idOfSquare] = player;
-//       setState(state)
-//       let nextPlayer = (player + 1) % 2;
-//       setPlayer(nextPlayer);
-//       return thePlayer;
-//   }
-
-//     function checkWinner (state) {
-        
-//         const win = [
-//             [0, 1, 2],
-//             [3, 4, 5],
-//             [6, 7, 8],
-//             [0, 3, 6],
-//             [1, 4, 7],
-//             [2, 5, 8],
-//             [0, 4, 8],
-//             [2, 4, 6],
-    
-//         ];
-    
-//         for (let i = 0; i < win.length; i++) {
-//             const [a, b, c] = win[i];
-//             if (state[a] == state[b] && state[a] == state[c] && state[a])
-//             return state[a] ;
-//         }
-    
-//         return null;
-//     }
-
-    
-
-//     const toggle = () => setMounted(!mounted)
-//     status = `Player ${player}`;
-//     function renderSquare(i) {
-
-//         return <Square id={i} player={player} newState={newState}></Square>
-//     }
-
-//     return(
-//         <>
-//             <h2>
-//                 {`Player ${player}'s turn...`}
-//             </h2>
-
-//             <div className="game-board">
-//             <div className="grid-row">
-//                     {renderSquare(0)}
-//                     {renderSquare(1)}
-//                     {renderSquare(2)}
-//                 </div>
-//                 <div className="grid-row">
-//                     {renderSquare(3)}
-//                     {renderSquare(4)}
-//                     {renderSquare(5)}
-//                 </div>
-//                 <div className="grid-row">
-//                     {renderSquare(6)}
-//                     {renderSquare(7)}
-//                     {renderSquare(8)}
-//             </div>
-//                 <div id="info">
-//                     <button
-//                         onClick={toggle}
-//                     >Show/Hide Row</button>
-//                 </div>
-
-//                 <div>
-//                     <h1>{status}</h1>
-//                 </div>
-//             </div>
-//         </>
-//     )
-// }
-
-// ReactDOM.render(
-//     <Board />,
-//     document.getElementById('root')
-// )
